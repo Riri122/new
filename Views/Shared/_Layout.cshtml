@@ -1,0 +1,69 @@
+﻿<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+     <title>@ViewData["Title"] - Newrtest</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+     
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="~/css/site.css" rel="stylesheet">
+  </head>
+  <body class="d-flex h-100 text-center text-white bg-dark flex-column">
+   
+  <div class="cover-container d-flex w-100 flex-column p-3 mx-auto ">
+       <header class="mb-auto">
+    <div>
+      <h3 class="float-md-start mb-0"><a class="navbar-brand link-secondary" asp-area="" asp-controller="Home" asp-action="Index">Newrtest</a></h3>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <li class="nav-item">
+             <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+        </li>
+        <li class="nav-item">
+             <a class="nav-link text-white" asp-area="" asp-controller="Categories" asp-action="Index">Categories</a>
+        </li>
+        <li class="nav-item">
+             <a class="nav-link text-white" asp-area="" asp-controller="Evenements" asp-action="Index">Evenements</a>
+        </li>
+      </nav>
+    </div>
+  </header>
+</div>
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  
+
+  <main class="px-3">
+     @RenderBody()
+  </main>
+
+  <footer class="mt-auto text-white-50">
+    <p>Cover template for <a  asp-area="" asp-controller="Home" asp-action="Index" class="text-white">Site</a>, by <a  asp-area="" asp-controller="Home" asp-action="Index" class="text-white">ristoo</a>.</p>
+  </footer>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

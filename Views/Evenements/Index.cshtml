@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Newrtest.Views.Home.Evenement>
+
+@{
+    ViewData["Title"] = "Evenements";
+}
+
+<div style="text-align:start;color:white;">
+    <div style="display:flex;justify-content:space-around;width:100%;">
+                <h1>Evenements</h1>
+
+<p >
+    <a asp-action="Create" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Create New</a>
+</p>
+    </div>
+<table class="table table-dark table-striped" >
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>Envoyer</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+
+</div>
